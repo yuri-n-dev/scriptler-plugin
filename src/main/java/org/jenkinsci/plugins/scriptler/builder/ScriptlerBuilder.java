@@ -106,7 +106,7 @@ public class ScriptlerBuilder extends Builder implements Serializable {
     }
 
     private void checkPermission(@NonNull Map<String, String> errors){
-        if(Jenkins.get().hasPermission(Jenkins.RUN_SCRIPTS)){
+        if(Jenkins.get().hasPermission(ScriptlerPermissions.RUN_SCRIPTS)){
             // user has right to add / edit Scripler steps
             return;
         }
